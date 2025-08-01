@@ -18,9 +18,11 @@ function App() {
     }
   };
   return (
-    <>
-      <h1>Контакты</h1>
+    <div className="flex flex-col flex-row justify-center items-center gap-6 min-h-screen p-5 bg-gray-50 ">
       <div>
+        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          Контакты
+        </h1>
         {/* <Card name={"Rinat"} phone={"Milenskii"}></Card> */}
         {contacts.map((contact) => {
           return (
@@ -34,10 +36,14 @@ function App() {
           );
         })}
       </div>
-      {/* // Дополнительно:
-      <h1>Избранное</h1>
-      <div></div> */}
-    </>
+
+      <div>
+        <h1>Избранное</h1>
+        {favorite.map((contacs) => {
+          return <Card />;
+        })}
+      </div>
+    </div>
   );
 }
 

@@ -5,7 +5,10 @@ export default function Card({ name, phone, onClick, isFavorite }) {
     <div className="card">
       <p>name:{name}</p>
       <p>phone:{phone}</p>
-      <button onClick={onClick}>
+      <button
+        onClick={onClick}
+        className={isFavorite ? "favButton" : "classikButton"}
+      >
         {isFavorite ? "In favorites" : "Add to favorites"}
       </button>
     </div>
